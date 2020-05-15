@@ -27,6 +27,10 @@ apt-get install docker-ce docker-ce-cli containerd.io
 add-apt-repository ppa:longsleep/golang-backports
 apt update
 apt install golang-go
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
 ```
 # Install kind
 `/usr/bin/` 以下に配置しておいた方が取りまわしが良い事も多い
