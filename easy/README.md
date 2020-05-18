@@ -165,13 +165,13 @@ deployment.apps "nginx" deleted
 nginx-deployment.yaml をデプロイします。
 ```
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata:
-  name: nginx-deployment
+  name: nginx-deployment 
   labels:
-    app: nginx
+    app: nginx 
 spec:
-  replicas: 3
+  replicas: 3 
   selector:
     matchLabels:
       app: nginx
@@ -227,7 +227,8 @@ persistentvolumeclaim/wp-pv-claim      Bound    pvc-fcfa1af2-cb95-4182-b635-2737
 ```
 
 # install [myapp](https://kind.sigs.k8s.io/docs/user/quick-start/#loading-an-image-into-your-cluster)
-KindにはローカルのDockerイメージを読み込む機能が存在している。この章では自分で構築したアプリをコンテナ化して実際にデプロイいたしましす。
+KindにはローカルのDockerイメージを読み込む機能が存在している。この章では自分で構築したアプリをコンテナ化して実際にデプロイいたします。
+
 main.go
 ```
 package main
