@@ -86,14 +86,18 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ## 実行
 今、デプロイしたKubernetes cluster にnginx をデプロイします
 ```
-# kubectl run nginx --image=nginx --replicas=3
-kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+# kubectl apply -f https://raw.githubusercontent.com/nwiizo/2020_gtb_container_work/master/easy/nginx-deployment.yaml
 deployment.apps/nginx created
 ```
 
 ## 確認
 今、デプロイしたものを確認します
 ```
+# kubectl get file 
+# kubectl get -f https://raw.githubusercontent.com/nwiizo/2020_gtb_container_work/master/easy/nginx-deployment.yaml
+NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+nginx             3/3     3            3           30s
+
 # kubectl get deploy
 NAME              READY   UP-TO-DATE   AVAILABLE   AGE
 nginx             3/3     3            3           49s
