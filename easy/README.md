@@ -33,6 +33,14 @@ chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
+### check
+```
+git version
+docker version
+go version
+kubectl version
+```
+
 # Install kind
 `/usr/bin/` 以下に配置しておいた方が取りまわしが良い事も多い
 `export` はbashrc やzshrcに入れておくと最終的に楽かも
