@@ -35,6 +35,7 @@ kubectl version --client
 ```
 # Install kind
 `/usr/bin/` 以下に配置しておいた方が取りまわしが良い事も多い
+`export` はbashrc やzshrcに入れておくと最終的に楽かも
 ```shell-session
 # export GOPATH=/usr/local/bin/go/bin
 # export PATH=$PATH:$GOPATH
