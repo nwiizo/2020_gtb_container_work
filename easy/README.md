@@ -23,7 +23,7 @@ add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
-apt-get update
+apt-get update -y
 apt-get install docker-ce docker-ce-cli containerd.io -y
 add-apt-repository ppa:longsleep/golang-backports -y
 apt update -y
