@@ -37,9 +37,10 @@ kubectl version --client
 `/usr/bin/` 以下に配置しておいた方が取りまわしが良い事も多い
 `export` はbashrc やzshrcに入れておくと最終的に楽かも
 ```shell-session
-# export GOPATH=/usr/local/bin/go/bin
+# export GOPATH=/usr/local/bin/go/
 # export PATH=$PATH:$GOPATH
 # go get -u sigs.k8s.io/kind
+# # cp /usr/local/bin/go/bin/kind /usr/bin/ 
 ```
 
 # Create Cluster
