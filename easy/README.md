@@ -282,7 +282,7 @@ kind load docker-image webweb:v1
 Challenge 課題
 * [ ] [METALLB](https://metallb.universe.tf/) をインストールして`type LoadBalancer` としてデプロイしなおしましょう
 * [ ] 自分が最近、書いた[cron](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) をKubernetes として実行してみましょう
-
+* [ ] ruby での課題をお願いします。
 
 # オマケ install [Sock Shop](https://github.com/microservices-demo/microservices-demo)
 今後、マイクロサービスをはじめるにあたって[Sock Shop](https://github.com/microservices-demo/microservices-demo)を紹介しておきます。
