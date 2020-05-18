@@ -7,6 +7,7 @@
 * [Golang](https://golang.org/doc/install) 1.13.1
 
 ### これでいい感じにダウンロードできろ
+研修環境と割り切ってroot で実行する愚行を許せ()
 ``` 
 apt-get install git-core -y
 apt-get remove docker docker-engine docker.io containerd runc -y
