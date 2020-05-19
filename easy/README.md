@@ -237,7 +237,7 @@ kubectl delete pods rs
 ```
 
 # install [WordPress](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
-* [Example: Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)を参考にデプロイしてください
+* [Example: Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)を参考にデプロイしてください  
 また、wordpress-deployment.yaml でのServiceをtype: ClusterIP に変更していただきたいです。
 ```
 apiVersion: v1
