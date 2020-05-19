@@ -93,7 +93,6 @@ deployment.apps/nginx created
 ## 確認
 今、デプロイしたものを確認します
 ```
-# kubectl get file 
 # kubectl get -f https://raw.githubusercontent.com/nwiizo/2020_gtb_container_work/master/easy/nginx-deployment.yaml
 NAME              READY   UP-TO-DATE   AVAILABLE   AGE
 nginx             3/3     3            3           30s
