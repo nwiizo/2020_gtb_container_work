@@ -185,6 +185,8 @@ spec:
         image: nginx:1.7.9
         ports:
         - containerPort: 80
+---
+
 ```
 
 resourceの取得
@@ -205,6 +207,22 @@ kubectl delete pods rs
 
 # install [WordPress](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 * [Example: Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)を参考にデプロイしてください
+また、wordpress-deployment.yaml でのServiceをtype: ClusterIP に変更していただきたいです。
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: wordpress
+    tier: frontend
+  type: ClusterIP
+```
 
 
 そして、デプロイしたものがこちらになります(ローカルのstorageに不安がある場合には事前に`  resources.requests.storage`を少し減らしておくのをオススメします。)
