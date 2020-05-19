@@ -196,7 +196,7 @@ spec:
 
 resourceの取得
 ```
-kubectl get pods rs
+kubectl get pod rs
 ```
 
 詳細の取得
