@@ -219,7 +219,24 @@ kubectl delete pods rs
 
 # install [WordPress](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 * [Example: Deploying WordPress and MySQL with Persistent Volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)を参考にデプロイしてください  
-また、wordpress-deployment.yaml でのServiceをtype: ClusterIP に変更していただきたいです。
+```
+cat <<EOF >./kustomization.yaml
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=YOUR_PASSWORD
+EOF
+curl -LO https://k8s.io/examples/application/wordpress/mysql-deployment.yaml
+curl -LO https://k8s.io/examples/application/wordpress/wordpress-deployment.yaml
+cat <<EOF >>./kustomization.yaml
+resources:
+  - mysql-deployment.yaml
+  - wordpress-deployment.yaml
+EOF
+```
+
+また、wordpress-deployment.yaml でのServiceをtype: ClusterIP に変更していただきたいです。  
+変更点
 ```
 apiVersion: v1
 kind: Service
@@ -239,6 +256,7 @@ spec:
 
 そして、デプロイしたものがこちらになります(ローカルのstorageに不安がある場合には事前に`  resources.requests.storage`を少し減らしておくのをオススメします。)
 ```
+●kubectl apply -k ./
 ●kubectl get -k ./
 NAME                           TYPE     DATA   AGE
 secret/mysql-pass-c57bb4t7mf   Opaque   1      24m
