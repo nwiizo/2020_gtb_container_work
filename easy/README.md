@@ -112,6 +112,13 @@ nginx-6db489d4b7-2djdm             1/1     Running   0          5m44s
 nginx-6db489d4b7-2vhs8             1/1     Running   0          5m44s
 nginx-6db489d4b7-lrgcd             1/1     Running   0          5m44s
 ```
+## アクセス確認
+下記のコマンドを実行します。
+```
+kubectl port-forward deployment/nginx 30080:80 --address 0.0.0.0
+```
+ブラウザかcurl にて`http://<vmIP>:30080`へのアクセス確認を行ってください
+
 
 ## 削除
 Pod を削除する
