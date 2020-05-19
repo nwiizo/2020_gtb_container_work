@@ -279,12 +279,13 @@ kind load docker-image webweb:v1
 * [ ] myappの[Service](https://kubernetes.io/docs/concepts/services-networking/service/)を書きましょう
 * [ ] myappのトップページに対して[Liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) を設定しましょう(HTTPでもTCPでも可)
 * [ ] myappに対して[kubectl proxy](https://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/) を利用してアクセスできるようにしましょう
+* [ ] myapp について[オートスケーリング](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)を設定していきましょう
 
 Challenge 課題
-* [ ] [METALLB](https://metallb.universe.tf/) をインストールして`type LoadBalancer` としてデプロイしなおしましょう
-* [ ] 自分が最近、書いた[cron](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) をKubernetes として実行してみましょう
-* [ ] ruby での課題をお願いします。
+* [ ] 以前やった講義の環境のDockerfileを書いて行きましょう
+* [ ] Kubernetesにデプロイしていきましょう
 
+* [nwiizo](https://twitter.com/nwiizo)がライブコーディングやる？
 # オマケ install [Sock Shop](https://github.com/microservices-demo/microservices-demo)
 今後、マイクロサービスをはじめるにあたって[Sock Shop](https://github.com/microservices-demo/microservices-demo)を紹介しておきます。
 ## 検証環境を構築
