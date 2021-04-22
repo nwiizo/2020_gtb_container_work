@@ -53,7 +53,7 @@ kubectl version
 
 # Create Cluster
 ```
-# kind create cluster --loglevel debug
+# kind create cluster -v 3
 Creating cluster "kind" ...
  ✓ Ensuring node image (kindest/node:v1.17.0) 🖼
  ✓ Preparing nodes 📦
